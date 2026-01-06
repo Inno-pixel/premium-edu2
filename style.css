@@ -1,0 +1,238 @@
+:root {
+    --primary: #020617;   
+    --gold: #d4af37;      
+    --white: #ffffff;
+    --text-muted: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    background: linear-gradient(rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.9)), 
+                url('logo-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+    z-index: 10000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+    background-color: #128C7E;
+}
+
+.wa-icon { font-size: 1.4rem; margin-right: 8px; }
+
+/* NAVBAR */
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.logo span { color: var(--gold); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li { margin-left: 2rem; }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-whatsapp {
+    background: transparent;
+    border: 1px solid var(--gold);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--gold) !important;
+}
+
+/* HERO */
+.hero {
+    padding: 220px 0 140px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.btn-solid {
+    background: var(--gold);
+    color: var(--primary);
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+/* CARDS */
+.services { padding: 100px 0; }
+
+.section-header { text-align: center; margin-bottom: 4rem; }
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+}
+
+.btn-card {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.btn-card:hover {
+    background: var(--gold);
+    color: var(--primary);
+}
+
+/* REVIEWS */
+.experience { padding: 100px 0; background: rgba(0,0,0,0.2); }
+
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.review-card {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--gold);
+}
+
+.author { display: block; margin-top: 20px; color: var(--gold); font-weight: 700; }
+
+/* FOOTER */
+footer { padding: 80px 0 40px; background: rgba(0,0,0,0.5); }
+
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+.footer-contact a { color: var(--gold); text-decoration: none; }
+
+.bottom-bar { text-align: center; margin-top: 50px; opacity: 0.5; font-size: 0.8rem; }
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .footer-grid, .review-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .whatsapp-float { bottom: 20px; right: 20px; padding: 10px 15px; }
+}
